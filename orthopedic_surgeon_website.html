@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#292d30">
+<title>Dr. Ahmed Mahmoud El-Sherif | Orthopedic Surgeon</title>
+<style>
+:root{--ink:#292d30;--muted:#70777d;--lime:#d6f486;--lime2:#c6e96c;--paper:#fff;--soft:#f1f2f1;--line:#e7e9e8;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:#292d30;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,a{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}
+.site-shell{width:min(1180px,calc(100% - 48px));margin:38px auto;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 24px 80px #0003}
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between;padding:17px 30px;border-bottom:1px solid #e9ebea;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:750;white-space:nowrap}.brand-mark{width:29px;height:34px;color:#49524d}.brand-mark svg{width:100%;height:100%}
+nav{display:flex;align-items:center;gap:27px;color:#6d7378;font-size:11px}nav a{transition:color .2s}nav a:hover{color:#202629}
+.header-actions{display:flex;align-items:center;gap:10px}.pill-btn{border:0;border-radius:30px;background:var(--lime);padding:12px 20px;font-size:11px;font-weight:750;color:#24292b;transition:transform .2s,background .2s;display:inline-flex;align-items:center;justify-content:center;gap:9px}.pill-btn:hover{background:var(--lime2);transform:translateY(-2px)}.menu-toggle{display:none;border:0;background:var(--lime);border-radius:50%;width:39px;height:39px;font-size:20px}
+.hero{min-height:470px;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;background:#cdd1d1}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#e5e7e6 0%,#d8dcdb 43%,#aeb5b4 100%)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#e3e5e4 0%,#e3e5e4ee 34%,#e3e5e440 60%,#29303322 100%)}
+.doctor-photo{position:absolute;z-index:-1;right:2%;bottom:-8%;height:108%;width:53%;object-fit:cover;object-position:center top;mix-blend-mode:multiply;mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 88%,transparent 100%);filter:saturate(.72) contrast(.96)}
+.hero-content{padding:58px 38px;max-width:650px;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border-radius:30px;background:#292d3010;color:#5e666b;padding:5px 11px;font-size:10px;margin-bottom:10px}
+h1{font-size:clamp(38px,4.2vw,58px);letter-spacing:-2.5px;line-height:1.03;margin:0 0 10px;font-weight:650;max-width:610px;color:#fff;text-shadow:0 1px 8px #41474712}
+h1 span{color:var(--lime)}.hero h2{font-size:19px;font-weight:500;margin:0 0 5px;color:#fff}.hero .tagline{color:#f7f8f7;font-size:12px;margin:0 0 17px}
+.contact-list{display:grid;gap:6px;margin:0 0 19px;color:#f8f9f7;font-size:11px}.contact-item{display:flex;align-items:center;gap:10px}.contact-icon{width:15px;height:15px;display:grid;place-items:center;border-radius:5px;color:#b8d86a;font-size:12px}
+.stats{display:flex;gap:38px;margin-top:22px}.stat strong{display:block;color:var(--lime);font-size:24px;line-height:1.1}.stat span{display:block;color:#fff;font-size:10px}
+.expert-badge{position:absolute;right:24px;top:32%;background:#ffffffc9;backdrop-filter:blur(12px);border-radius:18px;padding:12px 15px;display:flex;align-items:center;gap:10px;max-width:190px;font-size:10px;line-height:1.3;color:#4d5558;box-shadow:0 8px 28px #0000000a}.badge-icon{background:var(--lime);border-radius:50%;width:30px;height:30px;display:grid;place-items:center;flex-shrink:0}
+.section{padding:48px 30px}.section-head{text-align:center;margin:0 auto 25px}.section-label{font-size:10px;background:#eff0f0;color:#737a7e;padding:5px 11px;border-radius:20px;display:inline-block;margin-bottom:8px}.section h2{font-size:clamp(24px,3vw,32px);letter-spacing:-1px;line-height:1.15;margin:0;font-weight:650}.section-head p{color:var(--muted);font-size:12px;max-width:490px;margin:10px auto 0}.carousel-controls{display:flex;justify-content:center;gap:7px;margin-top:12px}.round-arrow{width:30px;height:30px;border:0;border-radius:50%;background:var(--lime);font-size:17px;display:grid;place-items:center;transition:transform .2s}.round-arrow:hover{transform:scale(1.08)}
+.conditions{background:radial-gradient(ellipse at 50% 30%,#f8f9f8 0,#fff 62%);padding-top:34px}
+.condition-track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center;padding:4px 0 18px}
+.condition-card{position:relative;border-radius:23px;overflow:hidden;min-height:245px;background:#dce0e1;box-shadow:0 10px 30px #2930330c;transform:rotate(var(--tilt,0deg));transition:transform .25s,box-shadow .25s;isolation:isolate}
+.condition-card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 18px 35px #2930331c}.condition-card:nth-child(even){margin-top:28px}
+.condition-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.68)}
+.condition-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#121c2410 25%,#fff0 43%,#fffef9f5 100%)}
+.card-arrow{position:absolute;right:12px;top:12px;width:29px;height:29px;border:0;background:#ffffffed;border-radius:50%;font-size:17px}
+.condition-copy{position:absolute;left:0;right:0;bottom:0;padding:17px 14px 15px}.condition-copy h3{font-size:13px;line-height:1.2;margin:0 0 5px}.condition-copy p{font-size:10px;line-height:1.4;color:#737a7e;margin:0}
+.expertise{padding-top:20px}.expertise-panel{border:1px solid #e8eae8;border-radius:24px;padding:25px 25px 30px;position:relative;overflow:hidden;background:linear-gradient(130deg,#fff,#fafbfa)}
+.panel-title{margin-bottom:5px}.panel-title h2{font-size:24px;max-width:460px}.panel-title .section-label{margin-bottom:7px}
+.expertise-layout{display:grid;grid-template-columns:1fr 1.05fr 1fr;align-items:center;gap:12px;margin-top:12px}
+.service-list{display:grid;gap:30px}.service{display:flex;align-items:flex-start;gap:12px}.service-icon{flex-shrink:0;width:39px;height:39px;border-radius:50%;background:#e9f7c7;display:grid;place-items:center;font-size:18px}.service h3{font-size:12px;margin:2px 0 4px}.service p{font-size:10px;line-height:1.4;color:#81878a;margin:0;max-width:165px}
+.knee-visual{position:relative;min-height:300px;display:grid;place-items:center}.knee-visual:before{content:"";position:absolute;width:90%;height:80%;border-radius:50%;background:radial-gradient(ellipse,#e2f5b8 0%,#f3f9e9 44%,transparent 72%)}.knee-visual img{width:100%;height:320px;object-fit:contain;position:relative;filter:saturate(.72)}
+.why{padding-top:18px}.why-panel{background:linear-gradient(135deg,#f3f4f3,#f9f9f8);border-radius:24px;padding:27px 26px 25px;position:relative;overflow:hidden}.why-panel:after{content:"ORTHOPEDICS";position:absolute;right:5px;bottom:-38px;font-size:clamp(54px,10vw,120px);font-weight:800;letter-spacing:-5px;color:#fff9;pointer-events:none;white-space:nowrap}
+.why-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;margin-bottom:23px;position:relative;z-index:1}.why-top h2{font-size:24px;max-width:530px}.why-top p{font-size:11px;line-height:1.5;color:#858b8e;max-width:290px;margin:13px 0 0}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative;z-index:1}.benefit{border:1px solid #eceeed;background:#ffffffdc;border-radius:16px;padding:15px 15px 17px;min-height:120px}.benefit-icon{width:29px;height:29px;border-radius:50%;background:#e4f5bb;display:grid;place-items:center;margin-bottom:8px;font-size:15px}.benefit h3{font-size:11px;margin:0 0 5px}.benefit p{font-size:10px;line-height:1.4;color:#81878b;margin:0}
+.cta{margin:0 14px 12px;border-radius:17px;background:linear-gradient(110deg,#272c30,#3c4246);color:#fff;padding:19px 25px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta-left{display:flex;align-items:center;gap:15px}.cta-icon{color:var(--lime);font-size:30px}.cta h2{font-size:14px;margin:0 0 3px}.cta p{font-size:10px;color:#c2c7c8;margin:0}
+footer{padding:15px 25px 20px;display:flex;justify-content:space-between;gap:15px;align-items:center;color:#899094;font-size:9px;border-top:1px solid #f0f1f0}.footer-contact{display:flex;gap:20px;flex-wrap:wrap}.socials{display:flex;gap:7px}.socials a{width:23px;height:23px;border:1px solid #e4e6e5;border-radius:50%;display:grid;place-items:center;color:#50585b;font-size:10px}
+.modal-backdrop{position:fixed;inset:0;z-index:50;background:#15191ccc;backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}.modal-backdrop.open{display:flex}.modal{width:min(460px,100%);background:white;border-radius:24px;padding:28px;box-shadow:0 25px 80px #0004;position:relative}.modal h2{font-size:25px;margin:0 0 6px}.modal>p{font-size:12px;color:#788084;margin:0 0 20px}.modal-close{position:absolute;right:18px;top:18px;border:0;border-radius:50%;width:32px;height:32px;background:#f0f2f0;font-size:20px}.form-grid{display:grid;gap:13px}.form-grid label{font-size:11px;font-weight:650;display:grid;gap:6px}.form-grid input,.form-grid select,.form-grid textarea{width:100%;border:1px solid #dfe3e0;border-radius:11px;padding:12px;font:inherit;font-size:13px;background:#fff;color:#303638}.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{outline:2px solid #d6f486;border-color:#a8c765}.form-grid .pill-btn{margin-top:3px;padding:14px}.form-message{display:none;padding:12px;border-radius:12px;background:#eff8dc;font-size:12px;color:#344324}.form-message.show{display:block}
+@media(max-width:850px){.site-shell{width:min(720px,calc(100% - 24px));margin:12px auto;border-radius:22px}header{padding:13px 18px}.menu-toggle{display:grid;place-items:center}.header-actions .pill-btn{display:none}nav{display:none;position:absolute;left:12px;right:12px;top:65px;background:#fff;border:1px solid #e7e9e8;border-radius:16px;padding:18px;box-shadow:0 15px 35px #0001;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 6px;border-bottom:1px solid #f0f1f0}nav a:last-child{border-bottom:0}.hero{min-height:590px;align-items:flex-start}.hero-content{padding:38px 25px;max-width:100%}.doctor-photo{height:58%;width:100%;right:0;bottom:-3%;object-position:center 15%;mask-image:linear-gradient(to bottom,transparent 0%,#000 15%,#000 85%,transparent 100%);opacity:.86}.hero-bg:after{background:linear-gradient(180deg,#d9dddc 0%,#d9dddcf2 38%,#d9dddc2a 75%,#29303320 100%)}.hero h1{color:#fff;font-size:clamp(39px,8vw,56px);max-width:510px}.expert-badge{top:auto;bottom:28px;right:18px}.section{padding:38px 20px}.condition-track{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.condition-card{min-height:230px;transform:none!important}.condition-card:nth-child(even){margin-top:0}.condition-card:last-child{grid-column:1/-1;min-height:180px}.expertise-panel{padding:22px 18px}.expertise-layout{grid-template-columns:1fr 1fr}.knee-visual{grid-column:1/-1;grid-row:1;min-height:230px}.knee-visual img{height:245px}.service-list{gap:20px}.why-top{display:block}.why-top p{max-width:500px}.benefits{grid-template-columns:repeat(2,1fr)}.cta{margin:0 10px 10px;padding:18px}.footer-contact{gap:8px 15px}}
+@media(max-width:480px){.site-shell{width:100%;margin:0;border-radius:0}.brand{font-size:11px}.brand-mark{width:25px}.hero{min-height:650px}.hero-content{padding:33px 20px}.hero h1{font-size:42px;letter-spacing:-1.8px}.hero h2{font-size:16px}.hero .tagline{max-width:260px}.contact-list{font-size:10px}.stats{gap:27px;margin-top:18px}.stat strong{font-size:22px}.doctor-photo{height:49%;width:112%;right:-6%;bottom:-1%}.expert-badge{bottom:18px;right:13px;font-size:9px;max-width:175px}.section{padding:32px 15px}.section h2{font-size:26px}.condition-track{grid-template-columns:1fr;gap:12px}.condition-card,.condition-card:last-child{grid-column:auto;min-height:190px}.condition-card img{object-position:center 45%}.condition-copy{padding:15px 16px}.condition-copy h3{font-size:14px}.condition-copy p{font-size:11px;max-width:220px}.expertise-layout{grid-template-columns:1fr}.knee-visual{grid-column:auto;grid-row:auto;min-height:230px}.knee-visual img{height:240px}.service-list{gap:17px}.service{align-items:center}.service p{max-width:none}.service h3{font-size:12px}.panel-title h2{font-size:22px}.why-panel{padding:22px 16px}.why-top h2{font-size:22px}.benefits{grid-template-columns:1fr;gap:9px}.benefit{min-height:0;display:grid;grid-template-columns:34px 1fr;column-gap:10px;padding:13px}.benefit-icon{grid-row:span 2;margin:0}.benefit h3{align-self:end}.benefit p{grid-column:2}.why-panel:after{font-size:55px;bottom:-15px}.cta{align-items:flex-start;flex-direction:column;padding:19px 17px}.cta .pill-btn{width:100%}.cta-left{align-items:flex-start}.cta-icon{font-size:26px}footer{align-items:flex-start;flex-direction:column;padding:17px}.footer-contact{display:grid;gap:6px}.modal{padding:25px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="site-shell">
+<header>
+  <a class="brand" href="#home" aria-label="Dr Ahmed El-Sherif home">
+    <span class="brand-mark"><svg viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 5C12 10 12 20 17 26c-4 4-5 9-3 15m6-36c8 5 8 15 3 21 4 4 5 9 3 15M20 5v40M8 14c-5 6-2 14 5 15m19-15c5 6 2 14-5 15M12 8c-4 2-5 7-2 10m18-10c4 2 5 7 2 10M14 41l6-5 6 5"/></svg></span>
+    <span>Dr. Ahmed El-Sherif</span>
+  </a>
+  <nav id="main-nav" aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#conditions">Conditions</a><a href="#expertise">Experience</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="header-actions"><button class="pill-btn book-trigger">Book Appointment <span>↗</span></button><button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <img class="doctor-photo" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1100&q=85" alt="Portrait of a doctor in a white coat" onerror="this.style.display='none'">
+  <div class="hero-content">
+    <span class="eyebrow">Orthopedic Surgeon</span>
+    <h1>Dr. Ahmed Mahmoud<br>El-Sherif, <span>M.D.</span></h1>
+    <h2>Consultant Orthopedic Surgeon</h2>
+    <p class="tagline">Better movement. Less pain. A stronger tomorrow.</p>
+    <div class="contact-list">
+      <div class="contact-item"><span class="contact-icon">●</span><span>New Cairo, Fifth Settlement, Cairo, Egypt</span></div>
+      <div class="contact-item"><span class="contact-icon">☎</span><a href="tel:+201000000000">+20 100 000 0000</a></div>
+      <div class="contact-item"><span class="contact-icon">✉</span><a href="mailto:ahmed.elsherif@example.com">ahmed.elsherif@example.com</a></div>
+      <div class="contact-item"><span class="contact-icon">in</span><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/ahmed-el-sherif-md</a></div>
+    </div>
+    <button class="pill-btn book-trigger">Book an Appointment <span>→</span></button>
+    <div class="stats"><div class="stat"><strong>8+</strong><span>Years of Experience</span></div><div class="stat"><strong>1000+</strong><span>Successful Surgeries</span></div></div>
+  </div>
+  <div class="expert-badge"><span class="badge-icon">✳</span><span>Expert in joint replacement &amp; sports injuries</span></div>
+</section>
+
+<section class="section conditions" id="conditions">
+  <div class="section-head"><span class="section-label">Conditions</span><h2>Conditions I Treat</h2><div class="carousel-controls"><button class="round-arrow" id="prev-cards" aria-label="Previous conditions">←</button><button class="round-arrow" id="next-cards" aria-label="Next conditions">→</button></div></div>
+  <div class="condition-track" id="condition-track">
+    <article class="condition-card" style="--tilt:-7deg"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=650&q=80" alt="Medical knee assessment"><button class="card-arrow" aria-label="Learn about knee problems" data-condition="Knee Problems">↗</button><div class="condition-copy"><h3>Knee Problems</h3><p>ACL tears, meniscus injuries, arthritis</p></div></article>
+    <article class="condition-card" style="--tilt:5deg"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=650&q=80" alt="Hip joint medical scan"><button class="card-arrow" aria-label="Learn about hip disorders" data-condition="Hip Disorders">↗</button><div class="condition-copy"><h3>Hip Disorders</h3><p>Hip pain, arthritis, replacement surgery</p></div></article>
+    <article class="condition-card" style="--tilt:-2deg"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=650&q=80" alt="Spine and skeletal anatomy"><button class="card-arrow" aria-label="Learn about spine conditions" data-condition="Spine Conditions">↗</button><div class="condition-copy"><h3>Spine Conditions</h3><p>Back pain, disc herniation, scoliosis</p></div></article>
+    <article class="condition-card" style="--tilt:7deg"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=650&q=80" alt="Shoulder and upper body anatomy"><button class="card-arrow" aria-label="Learn about shoulder injuries" data-condition="Shoulder Injuries">↗</button><div class="condition-copy"><h3>Shoulder Injuries</h3><p>Rotator cuff tears, instability</p></div></article>
+    <article class="condition-card" style="--tilt:4deg"><img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=650&q=80" alt="Medical imaging"><button class="card-arrow" aria-label="Learn about fractures and trauma" data-condition="Fractures & Trauma">↗</button><div class="condition-copy"><h3>Fractures &amp; Trauma</h3><p>Accidents, sports injuries, polytrauma</p></div></article>
+  </div>
+</section>
+
+<section class="section expertise" id="expertise">
+  <div class="expertise-panel">
+    <div class="panel-title"><span class="section-label">Our Expertise</span><h2>Advanced Orthopedic Care<br>for a Healthier, Active Life</h2></div>
+    <div class="expertise-layout">
+      <div class="service-list">
+        <article class="service"><span class="service-icon">⚕</span><div><h3>Joint Replacement</h3><p>Hip &amp; knee replacement for lasting mobility</p></div></article>
+        <article class="service"><span class="service-icon">⚒</span><div><h3>Sports Injury Care</h3><p>Ligament, meniscus &amp; sports medicine</p></div></article>
+      </div>
+      <div class="knee-visual"><img src="https://images.unsplash.com/photo-1583912267550-d6c2d1d9f7d5?auto=format&fit=crop&w=700&q=85" alt="Orthopedic care and joint anatomy illustration" onerror="this.style.display='none'"></div>
+      <div class="service-list">
+        <article class="service"><span class="service-icon">♧</span><div><h3>Spine Care</h3><p>Minimally invasive &amp; complex spine surgery</p></div></article>
+        <article class="service"><span class="service-icon">✣</span><div><h3>Arthroscopy</h3><p>Less pain, faster recovery with minimally invasive techniques</p></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="about">
+  <div class="why-panel">
+    <div class="why-top"><div><span class="section-label">Why Choose Me</span><h2>When Advanced Orthopedic Treatment<br>Is the Right Choice</h2></div><p>From chronic pain to sports injuries, I provide personalized, evidence-based treatment to help you move better, live stronger and get back to your life.</p></div>
+    <div class="benefits">
+      <article class="benefit"><span class="benefit-icon">✿</span><h3>Personalized Treatment</h3><p>Tailored to your needs and lifestyle</p></article>
+      <article class="benefit"><span class="benefit-icon">◈</span><h3>Evidence-Based Care</h3><p>Latest research &amp; proven methods</p></article>
+      <article class="benefit"><span class="benefit-icon">↗</span><h3>Minimally Invasive Techniques</h3><p>Less pain, smaller incisions, faster recovery</p></article>
+      <article class="benefit"><span class="benefit-icon">♙</span><h3>Recovery Support</h3><p>Guidance through every step of your journey</p></article>
+    </div>
+  </div>
+</section>
+<section class="cta" id="contact">
+  <div class="cta-left"><span class="cta-icon">▦</span><div><h2>Ready to take the next step?</h2><p>Book your consultation today for personalized orthopedic care.</p></div></div>
+  <button class="pill-btn book-trigger">Book an Appointment <span>→</span></button>
+</section>
+</main>
+<footer><span>Dr. Ahmed Mahmoud El-Sherif, M.D.</span><div class="footer-contact"><span>New Cairo, Fifth Settlement, Cairo, Egypt</span><a href="tel:+201000000000">+20 100 000 0000</a><a href="mailto:ahmed.elsherif@example.com">ahmed.elsherif@example.com</a></div><div class="socials"><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="#contact" aria-label="Contact">✉</a></div></footer>
+</div>
+
+<div class="modal-backdrop" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close booking form">×</button>
+    <h2 id="modal-title">Book an appointment</h2><p>Tell us a little about your visit and the clinic will follow up to confirm your appointment.</p>
+    <form class="form-grid" id="booking-form">
+      <label>Full name<input name="name" autocomplete="name" required placeholder="Your full name"></label>
+      <label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="+20 ..."></label>
+      <label>Reason for visit<select name="reason" required><option value="">Choose a condition</option><option>Knee Problems</option><option>Hip Disorders</option><option>Spine Conditions</option><option>Shoulder Injuries</option><option>Fractures &amp; Trauma</option><option>General consultation</option></select></label>
+      <label>Preferred date<input name="date" type="date" required></label>
+      <div class="form-message" id="form-message" role="status">Thank you. Your request is ready; please contact the clinic directly to confirm your appointment.</div>
+      <button class="pill-btn" type="submit">Send appointment request <span>→</span></button>
+    </form>
+  </div>
+</div>
+<script>
+(() => {
+  const nav = document.getElementById('main-nav');
+  const menu = document.getElementById('menu-toggle');
+  menu.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.textContent = open ? '×' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.textContent='☰';
+  }));
+  const track = document.getElementById('condition-track');
+  document.getElementById('prev-cards').addEventListener('click', () => track.scrollBy({left:-track.clientWidth*.75,behavior:'smooth'}));
+  document.getElementById('next-cards').addEventListener('click', () => track.scrollBy({left:track.clientWidth*.75,behavior:'smooth'}));
+  const modal = document.getElementById('booking-modal');
+  const closeModal = () => {modal.classList.remove('open');document.body.style.overflow='';};
+  document.querySelectorAll('.book-trigger').forEach(btn => btn.addEventListener('click', () => {modal.classList.add('open');document.body.style.overflow='hidden';}));
+  document.getElementById('modal-close').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+  document.querySelectorAll('[data-condition]').forEach(btn => btn.addEventListener('click', () => {
+    const reason = document.querySelector('select[name="reason"]');
+    reason.value = btn.dataset.condition;
+    modal.classList.add('open');document.body.style.overflow='hidden';
+  }));
+  document.getElementById('booking-form').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('form-message').classList.add('show');
+    e.currentTarget.querySelector('button[type="submit"]').textContent='Request prepared ✓';
+  });
+  const dateInput=document.querySelector('input[name="date"]');
+  const today=new Date(); dateInput.min = new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+})();
+</script>
+</body>
+</html>
